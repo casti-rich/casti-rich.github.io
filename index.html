@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <link rel="icon" href="assets/Loma_AldrichSam (1).svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid d-flex justify-content-center">
+      <div class="navbar-brand">
+        <a href="index.html">
+          <img src="assets/Loma_AldrichSam (1).svg" alt="Logo" width="100" height="70">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container p-5">
+
+    <div class="tab-content" id="pills-tabContent">
+
+      <ul class="nav nav-pills mb-3 justify-content-center gap-3 mt-4" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+            type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-skills-tab" data-bs-toggle="pill" data-bs-target="#pills-skills"
+            type="button" role="tab" aria-controls="pills-skills" aria-selected="false">Skills</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-hobbies-tab" data-bs-toggle="pill" data-bs-target="#pills-hobbies"
+            type="button" role="tab" aria-controls="pills-hobbies" aria-selected="false">Hobbies</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+            type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+        </li>
+      </ul>
+
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+        tabindex="0">
+        <div class="d-flex flex-column align-items-center text-center p-5">
+          <img src="assets/IMG_20260113_135248.jpg" alt="Profile photo" width="220" height="220"
+            class="rounded-circle mb-4 profile-img">
+          <h1 class="display-5 fw-bold">Hi, I'm Aldrich Sam Loma</h1>
+          <p class="lead text-secondary col-md-8">
+            I'm a web developer who enjoys building clean, functional sites with HTML, CSS, and JavaScript.
+            Welcome to my portfolio — take a look around!
+          </p>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="tab-pane fade" id="pills-skills" role="tabpanel" aria-labelledby="pills-skills-tab" tabindex="0">
+        <div class="p-4">
+          <h2 class="text-center mb-5">Skills &amp; Tools</h2>
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-6 col-md-3 text-center">
+              <div class="skill-card p-4 rounded">
+                <i class="bi bi-filetype-html display-4 text-danger"></i>
+                <h5 class="mt-3">HTML5</h5>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 text-center">
+              <div class="skill-card p-4 rounded">
+                <i class="bi bi-filetype-css display-4 text-primary"></i>
+                <h5 class="mt-3">CSS</h5>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 text-center">
+              <div class="skill-card p-4 rounded">
+                <i class="bi bi-filetype-js display-4 text-warning"></i>
+                <h5 class="mt-3">JavaScript</h5>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3 text-center">
+              <div class="skill-card p-4 rounded">
+                <i class="bi bi-bootstrap-fill display-4 text-purple"></i>
+                <h5 class="mt-3">Bootstrap</h5>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-hobbies" role="tabpanel" aria-labelledby="pills-hobbies-tab" tabindex="0">
+        <div class="p-4">
+          <h2 class="text-center mb-5">Hobbies</h2>
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-md-3 text-center">
+              <div class="skill-card p-4 rounded h-100">
+                <i class="bi bi-controller display-4"></i>
+                <h5 class="mt-3">Gaming</h5>
+                <p class="text-secondary small">Playing and exploring different game genres in my free time.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+              <div class="skill-card p-4 rounded h-100">
+                <i class="bi bi-music-note-beamed display-4"></i>
+                <h5 class="mt-3">Music</h5>
+                <p class="text-secondary small">Listening to a wide range of genres while working or relaxing.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+              <div class="skill-card p-4 rounded h-100">
+                <i class="bi bi-code-slash display-4"></i>
+                <h5 class="mt-3">Coding Projects</h5>
+                <p class="text-secondary small">Building small personal projects to learn new things.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 text-center">
+              <div class="skill-card p-4 rounded h-100">
+                <i class="bi bi-pencil-fill display-4"></i>
+                <h5 class="mt-3">Drawing</h5>
+                <p class="text-secondary small">Sketching and digital art whenever I have free time.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Drawing gallery -->
+          <h4 class="text-center mt-5 mb-4">My Drawings</h4>
+          <div class="row g-3 justify-content-center">
+
+            <div class="col-6 col-md-3">
+              <div class="drawing-card rounded overflow-hidden" data-bs-toggle="modal" data-bs-target="#imageModal"
+                data-img-src="assets/WINDYGIRL.jpg">
+                <img src="assets/WINDYGIRL.jpg" alt="Drawing 1" class="drawing-img">
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="drawing-card rounded overflow-hidden" data-bs-toggle="modal" data-bs-target="#imageModal"
+                data-img-src="assets/murkyd4.jpg">
+                <img src="assets/murkyd4.jpg" alt="Drawing 2" class="drawing-img">
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="drawing-card rounded overflow-hidden" data-bs-toggle="modal" data-bs-target="#imageModal"
+                data-img-src="assets/deer56.jpg">
+                <img src="assets/deer56.jpg" alt="Drawing 3" class="drawing-img">
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="drawing-card rounded overflow-hidden" data-bs-toggle="modal" data-bs-target="#imageModal"
+                data-img-src="assets/peekaboqssssqqo.jpg">
+                <img src="assets/peekaboqssssqqo.jpg" alt="Drawing 4" class="drawing-img">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+        <div class="p-4">
+          <h2 class="text-center mb-5">Contact Me</h2>
+          <div class="d-flex flex-column align-items-center gap-3">
+
+            <div class="contact-item d-flex align-items-center gap-3">
+              <i class="bi bi-envelope-fill fs-3"></i>
+              <span>aldrichsaml@gmail.com</span>
+            </div>
+
+            <div class="contact-item d-flex align-items-center gap-3">
+              <i class="bi bi-telephone-fill fs-3"></i>
+              <span>+63 906 111 036</span>
+            </div>
+
+            <div class="d-flex gap-4 mt-3">
+              <a href="https://www.facebook.com/aldrichsam.loma.1" class="social-icon" aria-label="Facebook"><i
+                  class="bi bi-facebook fs-2"></i></a>
+              <a href="https://www.instagram.com/a.drichvent/" class="social-icon" aria-label="Instagram"><i
+                  class="bi bi-instagram fs-2"></i></a>
+              <a href="https://github.com/casti-rich" class="social-icon" aria-label="GitHub"><i
+                  class="bi bi-github fs-2"></i></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <button type="button" class="btn-close btn-close-white ms-auto m-2" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+        <div class="modal-body text-center p-0">
+          <img id="modalImage" src="" alt="Full size drawing" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script>
+    const imageModal = document.getElementById('imageModal');
+    imageModal.addEventListener('show.bs.modal', event => {
+      const trigger = event.relatedTarget;
+      const imgSrc = trigger.getAttribute('data-img-src');
+      document.getElementById('modalImage').src = imgSrc;
+    });
+  </script>
+</body>
+
+</html>
