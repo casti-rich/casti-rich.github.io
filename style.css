@@ -1,48 +1,57 @@
-body {
-  background-color: #0d1117;
-  color: #e6edf3;
+[data-bs-theme="dark"] body {
+  background-color: #180f08;
   font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
-.navbar {
-  background-color: #161b22 !important;
-  border-bottom: 1px solid #30363d;
+[data-bs-theme="dark"] .navbar {
+  background-color: #110000 !important;
+  border-bottom: 3px solid #a00000;
 }
 
-#pills-tab .nav-link {
+[data-bs-theme="dark"] #pills-tab .nav-link {
   color: #e6edf3;
-  background-color: #161b22;
-  border: 1px solid #30363d;
+  background-color: #200000;
+  border: 1px solid #a00000;
   transition: all 0.2s ease;
 }
 
-#pills-tab .nav-link:hover {
-  background-color: #21262d;
+[data-bs-theme="dark"] #pills-tab .nav-link:hover {
+  background-color: #410000;
+  border: 1px solid #740000;
 }
 
-#pills-tab .nav-link.active {
-  background-color: #2f81f7;
+[data-bs-theme="dark"] #pills-tab .nav-link.active {
+  background-color: #412a00;
   color: #ffffff;
-  border-color: #2f81f7;
+  border: 1px solid #ffcc26;
 }
 
-.profile-img {
+[data-bs-theme="dark"] .profile-img {
   object-fit: cover;
-  border: 3px solid #2f81f7;
+  border: 3px solid #a00000;
 }
 
-.skill-card {
+.my-intro {
+  color: #1d0600;
+  -webkit-text-stroke: 0.5px rgb(255, 215, 36);
+}
+
+.the-speech {
+  color: #a00000 !important;
+}
+
+[data-bs-theme="dark"] .skill-card {
   background-color: #161b22;
   border: 1px solid #30363d;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.skill-card:hover {
+[data-bs-theme="dark"]  .skill-card:hover {
   transform: translateY(-5px);
   border-color: #2f81f7;
 }
 
-.contact-item {
+[data-bs-theme="dark"] .contact-item {
   background-color: #161b22;
   border: 1px solid #30363d;
   border-radius: 8px;
@@ -50,12 +59,12 @@ body {
   min-width: 280px;
 }
 
-.social-icon {
+[data-bs-theme="dark"] .social-icon {
   color: #e6edf3;
   transition: color 0.2s ease;
 }
 
-.social-icon:hover {
+[data-bs-theme="dark"] .social-icon:hover {
   color: #2f81f7;
 }
 
