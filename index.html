@@ -14,7 +14,7 @@
 </head>
 
 <body>
-
+  <audio id="bgMusic" src="assets/When Darkness Spreads.mp3" loop autoplay></audio>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid d-flex">
       <div class="navbar-brand">
@@ -22,9 +22,14 @@
           <img src="assets/Loma_AldrichSam (1).svg" alt="Logo" width="100" height="70">
         </a>
       </div>
-      <button id="themeToggle" class="btn btn-outline-secondary btn-sm">
-        <i class="bi bi-sun-fill"></i>
-      </button>
+      <div class="d-flex gap-2 ms-auto">
+        <button id="themeToggle" class="btn btn-outline-secondary btn-sm">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+        <button id="musicToggle" class="btn btn-outline-secondary btn-sm">
+          <i class="bi bi-volume-mute-fill"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -44,6 +49,11 @@
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="pills-hobbies-tab" data-bs-toggle="pill" data-bs-target="#pills-hobbies"
             type="button" role="tab" aria-controls="pills-hobbies" aria-selected="false">Hobbies</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-achievements-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-achievements" type="button" role="tab" aria-controls="pills-achievements"
+            aria-selected="false">Achievements</button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
@@ -115,6 +125,55 @@
               <div class="skill-card p-4 rounded">
                 <i class="bi bi-filetype-sql display-4 text-info"></i>
                 <h5 class="mt-3">SQL</h5>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-achievements" role="tabpanel" aria-labelledby="pills-achievements-tab"
+        tabindex="0">
+        <div class="p-4">
+          <h2 class="text-center mb-5">Achievements</h2>
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-md-4">
+              <div class="achievement-card p-4 rounded h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <i class="bi bi-trophy-fill text-warning fs-2"></i>
+                  <div>
+                    <h5 class="mb-0">FightPunks</h5>
+                    <small class="text-secondary">2025</small>
+                  </div>
+                </div>
+                <p class="text-secondary small mb-0">A fighting game project developed with my groupmates</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="achievement-card p-4 rounded h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <i class="bi bi-patch-check-fill text-primary fs-2"></i>
+                  <div>
+                    <h5 class="mb-0">Introduction to IoT Certification</h5>
+                    <small class="text-secondary">Cisco • 2026</small>
+                  </div>
+                </div>
+                <p class="text-secondary small mb-0">Certification in Introduction to IoT, covering fundamental concepts and applications.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="achievement-card p-4 rounded h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <i class="bi bi-star-fill text-warning fs-2"></i>
+                  <div>
+                    <h5 class="mb-0">Class Secretary</h5>
+                    <small class="text-secondary">2024-2025</small>
+                  </div>
+                </div>
+                <p class="text-secondary small mb-0">Served as the class secretary, managing communications and organizing meetings.</p>
               </div>
             </div>
 
@@ -252,16 +311,32 @@
     });
   </script>
   <script>
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', () => {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-bs-theme');
-      html.setAttribute('data-bs-theme', current === 'dark' ? 'light' : 'dark');
+    const themeToggle = document.getElementById('themeToggle');
+    const musicToggle = document.getElementById('musicToggle');
+    const audio = document.getElementById('bgMusic');
 
-      // swap icon
-      toggle.innerHTML = current === 'dark'
+    themeToggle.addEventListener('click', () => {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-bs-theme') === 'dark';
+
+      html.setAttribute('data-bs-theme', isDark ? 'light' : 'dark');
+      themeToggle.innerHTML = isDark
         ? '<i class="bi bi-moon-fill"></i>'
         : '<i class="bi bi-sun-fill"></i>';
+
+      const wasPlaying = !audio.paused;
+      audio.src = isDark ? 'assets/Remembrance of the Heart.mp3' : 'assets/When Darkness Spreads.mp3';
+      if (wasPlaying) audio.play();
+    });
+
+    musicToggle.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        musicToggle.innerHTML = '<i class="bi bi-volume-up-fill"></i>';
+      } else {
+        audio.pause();
+        musicToggle.innerHTML = '<i class="bi bi-volume-mute-fill"></i>';
+      }
     });
   </script>
 </body>

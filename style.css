@@ -1,6 +1,48 @@
+/* =====================
+   BASE (shared)
+   ===================== */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.text-purple {
+  color: #9d6bff;
+}
+
+/* Profile image */
+.profile-img {
+  object-fit: cover;
+}
+
+/* Drawing */
+.drawing-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.drawing-card:hover {
+  transform: translateY(-5px);
+}
+
+.drawing-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+/* dark mode */
 [data-bs-theme="dark"] body {
   background-color: #180f08;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+[data-bs-theme="dark"] .my-intro {
+  color: #1d0600;
+  -webkit-text-stroke: 0.5px rgb(255, 215, 36);
+}
+
+[data-bs-theme="dark"] .the-speech {
+  color: #a00000 !important;
 }
 
 [data-bs-theme="dark"] .navbar {
@@ -27,33 +69,23 @@
 }
 
 [data-bs-theme="dark"] .profile-img {
-  object-fit: cover;
   border: 3px solid #a00000;
 }
 
-.my-intro {
-  color: #1d0600;
-  -webkit-text-stroke: 0.5px rgb(255, 215, 36);
-}
-
-.the-speech {
-  color: #a00000 !important;
-}
-
 [data-bs-theme="dark"] .skill-card {
-  background-color: #161b22;
-  border: 1px solid #30363d;
+  background-color: #250000;
+  border: 1px solid #a00000;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-[data-bs-theme="dark"]  .skill-card:hover {
+[data-bs-theme="dark"] .skill-card:hover {
   transform: translateY(-5px);
-  border-color: #2f81f7;
+  border-color: #ff5926;
 }
 
 [data-bs-theme="dark"] .contact-item {
-  background-color: #161b22;
-  border: 1px solid #30363d;
+  background-color: #250000;
+  border: 1px solid #a00000;
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
   min-width: 280px;
@@ -65,28 +97,118 @@
 }
 
 [data-bs-theme="dark"] .social-icon:hover {
-  color: #2f81f7;
+  color: #ffcc26;
 }
 
-.text-purple {
-  color: #9d6bff;
+[data-bs-theme="dark"] .drawing-card {
+  background-color: #250000;
+  border: 1px solid #a00000;
 }
 
-.drawing-card {
-  background-color: #161b22;
-  border: 1px solid #30363d;
-  cursor: pointer;
+[data-bs-theme="dark"] .drawing-card:hover {
+  border-color: #ff5926;
+}
+
+[data-bs-theme="dark"] .achievement-card {
+  background-color: #250000;
+  border: 1px solid #a00000;
+  border-left: 4px solid #ffcc26;
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.drawing-card:hover {
+[data-bs-theme="dark"] .achievement-card:hover {
   transform: translateY(-5px);
-  border-color: #2f81f7;
+  border-left-color: #ff5926;
 }
 
-.drawing-img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
+/* light mode */
+
+[data-bs-theme="light"] .my-intro {
+  color: rgb(255, 215, 36);
+  -webkit-text-stroke: 1px rgb(0, 0, 163);
+}
+
+[data-bs-theme="light"] .the-speech {
+  color: #0b0070 !important;
+}
+
+[data-bs-theme="light"] body {
+  background-color: #eaf3ff;
+  color: #0a1a2f;
+}
+ 
+[data-bs-theme="light"] .navbar {
+  background-color: #ffffff !important;
+  border-bottom: 3px solid #f5c400;
+}
+ 
+[data-bs-theme="light"] #pills-tab .nav-link {
+  color: #0a1a2f;
+  background-color: #ffffff;
+  border: 1px solid #1a6fc4;
+  transition: all 0.2s ease;
+}
+ 
+[data-bs-theme="light"] #pills-tab .nav-link:hover {
+  background-color: #dceeff;
+  border-color: #1a6fc4;
+}
+ 
+[data-bs-theme="light"] #pills-tab .nav-link.active {
+  background-color: #1a6fc4;
+  color: #ffffff;
+  border-color: #f5c400;
+}
+ 
+[data-bs-theme="light"] .profile-img {
+  border: 3px solid #1a6fc4;
+}
+ 
+[data-bs-theme="light"] .skill-card {
+  background-color: #ffffff;
+  border: 1px solid #1a6fc4;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+ 
+[data-bs-theme="light"] .skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #f5c400;
+}
+ 
+[data-bs-theme="light"] .contact-item {
+  background-color: #ffffff;
+  border: 1px solid #1a6fc4;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  min-width: 280px;
+}
+ 
+[data-bs-theme="light"] .social-icon {
+  color: #1a6fc4;
+  transition: color 0.2s ease;
+}
+ 
+[data-bs-theme="light"] .social-icon:hover {
+  color: #f5c400;
+}
+ 
+[data-bs-theme="light"] .drawing-card {
+  background-color: #ffffff;
+  border: 1px solid #1a6fc4;
+}
+ 
+[data-bs-theme="light"] .drawing-card:hover {
+  border-color: #f5c400;
+}
+ 
+[data-bs-theme="light"] .achievement-card {
+  background-color: #ffffff;
+  border: 1px solid #1a6fc4;
+  border-left: 4px solid #f5c400;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+ 
+[data-bs-theme="light"] .achievement-card:hover {
+  transform: translateY(-5px);
+  border-left-color: #1a6fc4;
 }
