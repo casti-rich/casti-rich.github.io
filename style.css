@@ -115,6 +115,15 @@ body {
   border-left-color: #ff5926;
 }
 
+[data-bs-theme="dark"] #education .education-card {
+  background-color: #250000;
+  border: 1px solid #a00000;
+}
+
+[data-bs-theme="dark"] #education .text-secondary {
+  color: #ffcc26 !important;
+}
+
 [data-bs-theme="light"] .my-intro {
   color: rgb(255, 215, 36);
   -webkit-text-stroke: 1px rgb(0, 0, 163);
