@@ -6,12 +6,10 @@ body {
   color: #9d6bff;
 }
 
-/* Profile image */
 .profile-img {
   object-fit: cover;
 }
 
-/* Drawing */
 .drawing-card {
   cursor: pointer;
   transition: transform 0.2s ease, border-color 0.2s ease;
@@ -28,7 +26,6 @@ body {
   display: block;
 }
 
-/* dark mode */
 [data-bs-theme="dark"] body {
   background-color: #180f08;
 }
@@ -118,8 +115,6 @@ body {
   border-left-color: #ff5926;
 }
 
-/* light mode */
-
 [data-bs-theme="light"] .my-intro {
   color: rgb(255, 215, 36);
   -webkit-text-stroke: 1px rgb(0, 0, 163);
@@ -144,6 +139,11 @@ body {
   background-color: #ffffff;
   border: 1px solid #1a6fc4;
   transition: all 0.2s ease;
+}
+
+[data-bs-theme="light"] #education .education-card {
+  background-color: #ffffff;
+  border: 1px solid #1a6fc4;
 }
  
 [data-bs-theme="light"] #pills-tab .nav-link:hover {
